@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "URL Reader Accessible",
+    "version": "1.0",
+    "description": "Reads the current page URL, saves to local storage, and allows retrieval from any page",
+    "permissions": ["tabs", "storage"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
